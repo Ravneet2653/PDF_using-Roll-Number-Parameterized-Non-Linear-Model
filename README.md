@@ -1,82 +1,71 @@
-# PDF_using-Roll-Number-Parameterized-Non-Linear-Model
-# 📊 Probability Density Learning using Roll-Number-Parameterized Non-Linear Model
+PDF Using Roll Number Parameterized Non Linear Model
 
-## 📌 Problem Statement  
-This project learns a probability density function (PDF) from air quality data using a roll-number-dependent non-linear transformation.
+Problem Statement
 
-**Dataset:**  
-https://www.kaggle.com/datasets/shrutibhargava94/india-air-quality-data  
-**Feature used:** NO2
+This project learns a probability density function from air quality data using a roll number dependent non linear transformation.
 
----
+Dataset
+India Air Quality Data from Kaggle  
+https://www.kaggle.com/datasets/shrutibhargava94/india-air-quality-data
 
-## 🔁 Step 1: Transformation  
-Each value of NO2 (x) is transformed into z using:
+Feature Used
+NO2
 
-z = x + a_r sin(b_r x)
+Step 1 Transformation
+
+Each NO2 value x is transformed into z using the formula:
+
+z = x + ar * sin(br * x)
 
 Where:
-- a_r = 0.05 × (r mod 7)
-- b_r = 0.3 × (r mod 5 + 1)
-- r = university roll number
+ar = 0.05 * (r mod 7)  
+br = 0.3 * (r mod 5 + 1)  
+r is the university roll number
 
----
+Step 2 Probability Density Function
 
-## 📐 Step 2: Probability Density Function  
-We assume the transformed variable z follows a Gaussian distribution:
-
-p̂(z) = c · exp(−λ(z − μ)²)
+The transformed variable z is assumed to follow a Gaussian distribution.
 
 Using Maximum Likelihood Estimation:
-- μ = mean(z)
-- σ = standard deviation(z)
-- λ = 1 / (2σ²)
-- c = 1 / √(2πσ²)
+mu = mean(z)  
+sigma = standard deviation(z)  
+lambda = 1 / (2 * sigma * sigma)  
+c = 1 / sqrt(2 * pi * sigma * sigma)
 
----
+Step 3 Results
 
-## 📊 Step 3: Results  
+The model automatically computes:
+Lambda  
+Mu  
+c
 
-| Parameter | Value |
-|----------|-------|
-| Lambda (λ) | Auto-computed |
-| Mu (μ) | Auto-computed |
-| c | Auto-computed |
+Visualization
 
----
+A histogram of transformed values z is plotted along with the learned probability density function to verify the model fit.
 
-## 📈 Visualization  
-A histogram of transformed values z and the learned PDF curve are plotted to validate the model fit.
+Tools Used
 
----
+Python  
+Pandas  
+NumPy  
+Matplotlib  
+Google Colab  
 
-## 🛠 Tools Used  
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Google Colab  
+Files
 
----
+PDF_Learning.ipynb  
+data.csv  
+README.md  
 
-## 📂 Files  
-- PDF_Learning.ipynb → Colab notebook  
-- data.csv → Dataset file  
-- README.md → Project documentation  
+How to Run
 
----
+1. Upload data.csv to Google Colab
+2. Open PDF_Learning.ipynb
+3. Set your roll number r
+4. Run all cells
 
-## 🚀 How to Run  
-1. Upload `data.csv` to Colab.  
-2. Open the notebook.  
-3. Set your roll number `r`.  
-4. Run all cells.
-Result Table:
-    Parameter      Value
-0  Lambda (λ)   0.001460
-1      Mu (μ)  25.809623
-2           c   0.021561
+Sample Output
 
-
-
----
+Lambda 0.001460  
+Mu 25.809623  
+c 0.021561
