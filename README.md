@@ -60,12 +60,12 @@ Tools and Technologies
 Python  
 Pandas  
 NumPy  
-Matplotlib  
+Matplotlib
 Google Colab  
 
 Project Structure
 
-PDF_Learning.ipynb  
+assign1_ucs654.ipynb  
 data.csv  
 README.md  
 
@@ -73,7 +73,7 @@ How to Run the Project
 
 1. Download or clone this repository
 2. Upload data.csv to Google Colab or your local environment
-3. Open PDF_Learning.ipynb
+3. Open assign1_ucs654.ipynb
 4. Set your university roll number in the code
 5. Run all cells to generate results and plots
 
