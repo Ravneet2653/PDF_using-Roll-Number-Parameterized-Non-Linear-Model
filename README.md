@@ -71,5 +71,12 @@ A histogram of transformed values z and the learned PDF curve are plotted to val
 2. Open the notebook.  
 3. Set your roll number `r`.  
 4. Run all cells.
+Result Table:
+    Parameter      Value
+0  Lambda (λ)   0.001460
+1      Mu (μ)  25.809623
+2           c   0.021561
+
+
 
 ---
